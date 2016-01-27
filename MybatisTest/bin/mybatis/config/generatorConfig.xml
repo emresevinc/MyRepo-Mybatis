@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+		
+<generatorConfiguration>
+<classPathEntry location = "C:/Users/EMRE/Desktop/sqljdbc_4.0/enu/sqljdbc4.jar"/>
+  <context id="generatorMybatisTest" targetRuntime="MyBatis3">
+    
+    <jdbcConnection driverClass = "com.microsoft.sqlserver.jdbc.SQLServerDriver"
+        connectionURL = "jdbc:sqlserver://localhost:1433;databaseName=TEST;integratedSecurity=true;">
+    </jdbcConnection>
+    
+    <javaTypeResolver>
+  		<property name="forceBigDecimals" value="false" /> 
+  	</javaTypeResolver>
+  	
+    <javaModelGenerator  targetPackage="mybatis.bean" targetProject="C:\Users\EMRE\workspace\MybatisTest\src"  >
+   		<property name="enableSubPackages" value="true"/>	
+   		<property name="trimStrings" value="true"/>
+    </javaModelGenerator>
+    
+    <sqlMapGenerator targetPackage="mybatis.mapperXML" targetProject="C:\Users\EMRE\workspace\MybatisTest\src"   />
+    <javaClientGenerator  type="MIXEDMAPPER" targetPackage="mybatis.mapper" targetProject="C:\Users\EMRE\workspace\MybatisTest\src" />
+	
+	<table tableName="CUSTOMER" domainObjectName="Customer"></table>
+	
+</context>
+ 
+
+</generatorConfiguration>
